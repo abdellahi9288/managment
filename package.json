@@ -1,0 +1,27 @@
+{
+  "name": "inventory-management-system",
+  "version": "1.0.0",
+  "description": "Full stack inventory management system with React, Next.js, and Node.js",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "nextjs-client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:nextjs\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev:nextjs": "cd nextjs-client && npm run dev",
+    "build": "npm run build:client && npm run build:nextjs",
+    "build:client": "cd client && npm run build",
+    "build:nextjs": "cd nextjs-client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
